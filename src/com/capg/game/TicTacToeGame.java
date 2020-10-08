@@ -6,6 +6,9 @@ public class TicTacToeGame {
 	
 	static Scanner sc = new Scanner(System.in);
 
+	private static final char CHARACTER_X = 'X';
+	private static final char CHARACTER_Y = 'Y';
+	
 	public static void main(String[] args) {
 
 		createBoard();
@@ -21,11 +24,13 @@ public class TicTacToeGame {
 		return ticTacBoard;
 	}
 
-	public static void playerChoice(char choice) {
-		if(choice == 'X') {
-			System.out.println("Computer choice is 'O'");
+	public static char playerChoice(char playerChoice) {
+		char computerChoice;
+		if(playerChoice == CHARACTER_X ) {
+			computerChoice = CHARACTER_Y;
 		}else {
-			System.out.println("Computer choice is 'X'");
+			computerChoice = CHARACTER_X;
 		}
+		return computerChoice;
 	}
 }
